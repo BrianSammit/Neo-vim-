@@ -14,6 +14,7 @@ local options = {
   splitbelow = true,            -- force all horizontal splits to go below current window
   splitright = true,            -- force all vertical splits to go to the right of current window
 	tabstop = 2,                  -- insert 2 spaces for a tab
+  termguicolors = true,         -- set term gui colors (most terminals support this)
   shiftwidth = 2,               -- the number of spaces inserted for each indentation
   expandtab = true,             -- convert tabs to spaces
   signcolumn = "yes",           -- always show the sign column, otherwise it would shift the text each time
@@ -27,6 +28,5 @@ end
   vim.opt.path:append('**')
 
   vim.cmd [[filetype plugin on]]
-  vim.cmd [[:highlight cursorline cterm=bold ctermbg=black]]
   
 
