@@ -19,6 +19,7 @@ local options = {
   expandtab = true,             -- convert tabs to spaces
   signcolumn = "yes",           -- always show the sign column, otherwise it would shift the text each time
   scrolloff = 8,
+  wrap = false, 
 }
 
   for k, v in pairs(options) do
