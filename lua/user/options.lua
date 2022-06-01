@@ -2,6 +2,7 @@ local options = {
   backup = false,               -- Creates a backup file
   clipboard = "unnamedplus",    -- Access system clipboard from neovim
   cmdheight = 2,                -- More space in the command line
+  completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   cursorline = true,            -- highlight current line
   fileencoding = "utf-8",       -- the encoding written to a file
   ignorecase = true,            -- ignore case in search patterns
@@ -22,12 +23,14 @@ local options = {
   wrap = false,
 }
 
-  for k, v in pairs(options) do
+for k, v in pairs(options) do
  vim.opt[k] = v
 end
 
   vim.opt.path:append('**')
 
   vim.cmd [[filetype plugin on]]
+  vim.cmd [[set iskeyword+=-]]
+  vim.cmd [[set nohlsearch]]
 
 
